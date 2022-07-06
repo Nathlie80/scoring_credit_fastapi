@@ -35,6 +35,11 @@ list_columns.remove('TARGET')
 ## class client creation
 class Client(BaseModel):
     id : int
+    
+@app.get("/")
+def hello_world():
+    return {"msg": "Client risk probability API"}
+
 
 # 3. Expose the prediction functionality, make a prediction from  data 
 ## and return the predicted and probability
